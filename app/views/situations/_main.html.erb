@@ -1,0 +1,24 @@
+<div class="main-header">
+  <div class="left-header">
+    <div class="header-title">
+      <%= @situation.name %>
+    </div>
+</div>
+<div class="center_header">
+        <ul class="category-lists">
+          <li><%= link_to '目的', situation_purposes_path(@situation.id), class: "purpose-list" %></li>
+          <li><%= link_to '価値観', situation_values_path(@situation.id), class: "values-list" %></li>
+          <li><%= link_to '構想', "#", class: "vision-list" %></li>
+          <li><%= link_to '目標', "#", class: "goal-list" %></li>
+          
+        </ul>
+</div>
+  <div class="right-header">
+    <div class="header-button">
+      <%= link_to "ログアウト",destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
+</div>
+
+<div class="messages">
+</div>
