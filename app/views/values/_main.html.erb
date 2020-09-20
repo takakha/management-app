@@ -21,27 +21,11 @@
 </div>
 
 <div class="messages">
-<p>table-layout: auto;の場合</p>
-<table border="1" width="100%" style="table-layout: auto;">
-<tr>
-<th bgcolor="#EE0000"><font color="#FFFFFF">メニュー</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">説明</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">豆知識</font></th>
-</tr>
-<tr>
-<td bgcolor="#99CC00">ナポリタン</td>
-<td bgcolor="#FFFFFF">ケチャップ味のパスタ</td>
-<td bgcolor="#FFFFFF">ナポリタンというメニューは実はイタリアにはない</td>
-</tr>
-<tr>
-<td bgcolor="#99CC00">ぺペロンチーノ</td>
-<td bgcolor="#FFFFFF">ニンニクと唐辛子とオリーブオイルのパスタ</td>
-<td bgcolor="#FFFFFF">ぺペロンチーノとは唐辛子のこと</td>
-</tr>
-<tr>
-<td bgcolor="#99CC00">ボンゴレビアンコ</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">ボンゴレとはあさり、ビアンコとは白のこと</td>
-</tr>
-</table>
+<%if @values.present?%>
+<%= render "message"%>
+<%else%>
+  <div class="create-value">
+    <%= link_to "価値評定スケールの作成", new_situation_value_path(@situation.id) %>
+  </div>
+<%end%>
 </div>
