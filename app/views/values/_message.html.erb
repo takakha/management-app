@@ -1,0 +1,105 @@
+<div class="message">
+<% @values.each do |f|%>
+<% if f.situation_id == @situation.id %>
+<table border="1" width="100%" style="table-layout: auto;">
+<%= f.date%>
+<tr>
+<th bgcolor="#EE0000"><font color="#FFFFFF">要素</font></th>
+<th bgcolor="#EE0000"><font color="#FFFFFF">自分の価値観</font></th>
+<th bgcolor="#EE0000"><font color="#FFFFFF">重要度</font></th>
+<th bgcolor="#EE0000"><font color="#FFFFFF">一致度</font></th>
+<th bgcolor="#EE0000"><font color="#FFFFFF">ギャップ</font></th>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name1%></td>
+<td bgcolor="#FFFFFF"><%=f.text1%></td>
+<td bgcolor="#FFFFFF"><%=f.importance1%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence1%></td>
+<td bgcolor="#FFFFFF"><%= different1 = f.coincidence1- f.importance1  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name2%></td>
+<td bgcolor="#FFFFFF"><%=f.text2%></td>
+<td bgcolor="#FFFFFF"><%=f.importance2%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence2%></td>
+<td bgcolor="#FFFFFF"><%= different2 = f.coincidence2 - f.importance2 %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name3%></td>
+<td bgcolor="#FFFFFF"><%=f.text3%></td>
+<td bgcolor="#FFFFFF"><%=f.importance3%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence3%></td>
+<td bgcolor="#FFFFFF"><%= different3 =  f.coincidence3 - f.importance3  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name4%></td>
+<td bgcolor="#FFFFFF"><%=f.text4%></td>
+<td bgcolor="#FFFFFF"><%=f.importance4%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence4%></td>
+<td bgcolor="#FFFFFF"><%= different4 = f.coincidence4 - f.importance4  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name5%></td>
+<td bgcolor="#FFFFFF"><%=f.text5%></td>
+<td bgcolor="#FFFFFF"><%=f.importance5%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence5%></td>
+<td bgcolor="#FFFFFF"><%= different5 = f.coincidence5 - f.importance5  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name6%></td>
+<td bgcolor="#FFFFFF"><%=f.text6%></td>
+<td bgcolor="#FFFFFF"><%=f.importance6%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence6%></td>
+<td bgcolor="#FFFFFF"><%= different6 = f.coincidence6 - f.importance6  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name7%></td>
+<td bgcolor="#FFFFFF"><%=f.text7%></td>
+<td bgcolor="#FFFFFF"><%=f.importance7%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence7%></td>
+<td bgcolor="#FFFFFF"><%= different7 = f.coincidence7 - f.importance7  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name8%></td>
+<td bgcolor="#FFFFFF"><%=f.text8%></td>
+<td bgcolor="#FFFFFF"><%=f.importance8%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence8%></td>
+<td bgcolor="#FFFFFF"><%= different8 = f.coincidence8 - f.importance8  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name9%></td>
+<td bgcolor="#FFFFFF"><%=f.text9%></td>
+<td bgcolor="#FFFFFF"><%=f.importance9%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence9%></td>
+<td bgcolor="#FFFFFF"><%= different9 = f.coincidence9 - f.importance9  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name10%></td>
+<td bgcolor="#FFFFFF"><%=f.text10%></td>
+<td bgcolor="#FFFFFF"><%=f.importance10%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence10%></td>
+<td bgcolor="#FFFFFF"><%= different10 = f.coincidence10 - f.importance10  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name11%></td>
+<td bgcolor="#FFFFFF"><%=f.text11%></td>
+<td bgcolor="#FFFFFF"><%=f.importance11%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence11%></td>
+<td bgcolor="#FFFFFF"><%= different11 = f.coincidence11 - f.importance11  %></td>
+</tr>
+<tr>
+<td bgcolor="#99CC00"><%=f.name12%></td>
+<td bgcolor="#FFFFFF"><%=f.text12%></td>
+<td bgcolor="#FFFFFF"><%=f.importance12%></td>
+<td bgcolor="#FFFFFF"><%=f.coincidence12%></td>
+<td bgcolor="#FFFFFF"><%= different12 = f.coincidence12 - f.importance12  %></td>
+</tr>
+</table>
+<div class = "value-btn">
+<%= link_to "edit",method: :get %>
+<%= link_to "delete", method: :delete  %>
+</div>
+<hr>
+<%end%>
+<%end%>
+</div>

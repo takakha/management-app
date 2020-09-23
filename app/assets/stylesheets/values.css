@@ -1,0 +1,25 @@
+.value-text{
+  border:solid 1px #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 300px;
+}
+
+.value-text:focus{
+  width: 500px;
+}
+
+.value-btn{
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  background-color: #3babec;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border-bottom: 4px solid #0074d3;
+}

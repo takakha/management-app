@@ -310,6 +310,18 @@ select {
   display: contents;
 }
 
+
+.create-value {
+  font-size: 10px;
+}
+
+.create-value a {
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
 }
