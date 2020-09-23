@@ -1,4 +1,6 @@
 <div class="message">
+<% @values.each do |f|%>
+<% if f.situation_id == @situation.id %>
 <table border="1" width="100%" style="table-layout: auto;">
 <tr>
 <th bgcolor="#EE0000"><font color="#FFFFFF">要素</font></th>
@@ -92,4 +94,6 @@
 <td bgcolor="#FFFFFF">1</td>
 </tr>
 </table>
+<%end%>
+<%end%>
 </div>

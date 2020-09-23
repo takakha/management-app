@@ -21,97 +21,104 @@
 </div>
 
 <div class="messages">
+
+
+<%= form_with model: [@situation, @value], local: true do |f| %>
 <table border="1" width="100%" style="table-layout: auto;">
 <tr>
 <th bgcolor="#EE0000"><font color="#FFFFFF">要素</font></th>
 <th bgcolor="#EE0000"><font color="#FFFFFF">自分の価値観</font></th>
 <th bgcolor="#EE0000"><font color="#FFFFFF">重要度</font></th>
-<th bgcolor="#EE0000"><font color="#FFFFFF">一致度</font></th>
+<th bgcolor="#EE0000"><font color="#FFFFFF">実行度</font></th>
 <th bgcolor="#EE0000"><font color="#FFFFFF">ギャップ</font></th>
 </tr>
 <tr>
-<td bgcolor="#99CC00">家族</td>
-<td bgcolor="#FFFFFF">ケチャップ味のパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name1, placeholder: "構成要素　(例)家族" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text1, class: "value-text", placeholder: "(例)笑いの絶えない家庭" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance1, id:"imp-1", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence1,id:"coin-1", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-1'>0</span></td>
+
 </tr>
 <tr>
-<td bgcolor="#99CC00">結婚、恋愛</td>
-<td bgcolor="#FFFFFF">ニンニクと唐辛子とオリーブオイルのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name2, placeholder: "(例)結婚、恋愛" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text2,class: "value-text", placeholder: "(例)ドキドキを忘れない" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance2,id:"imp-2", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence2,id:"coin-2", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-2'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">子育て</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name3, placeholder: "(例)子育て" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text3,class: "value-text", placeholder: "(例)好きなことを全力で応援する" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance3,id:"imp-3", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence3,id:"coin-3", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-3'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">友人、対人関係</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name4, placeholder: "(例)対人関係" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text4,class: "value-text", placeholder: "(例)共に高め合う仲間でいる" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance4,id:"imp-4", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence4,id:"coin-4", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-4'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">キャリア、仕事</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name5, placeholder: "(例)仕事" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text5,class: "value-text", placeholder: "(例)仕事を自ら追いかけ続ける" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance5,id:"imp-5", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence5,id:"coin-5", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-5'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">自己成長</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name6, placeholder: "(例)自己成長" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text6,class: "value-text", placeholder: "(例)怖いと感じるくらいのチャレンジをする" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance6,id:"imp-6", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence6,id:"coin-6", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-6'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">余暇、レジャー</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name7, placeholder: "(例)余暇、レジャー" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text7,class: "value-text", placeholder: "(例)常にフレッシュな経験をしたい" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance7,id:"imp-7", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence7,id:"coin-7", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-7'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">スピリチュアリティ</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name8, placeholder: "(例)宗教、哲学" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text8,class: "value-text", placeholder: "(例)俗世と離れて深い思考に耽りたい" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance8,id:"imp-8", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence8,id:"coin-8", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-8'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">コミュニティ</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name9, placeholder: "(例)コミュニティ" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text9,class: "value-text", placeholder: "(例)地域の繋がりを大切にしたい" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance9,id:"imp-9", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence9,id:"coin-9", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-9'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">健康</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name10, placeholder: "(例)健康" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text10,class: "value-text", placeholder: "(例)肉体と精神をアップデートし続ける" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance10,id:"imp-10", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence10,id:"coin-10", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-10'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">環境</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name11, placeholder: "(例)ボランティア" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text11,class: "value-text", placeholder: "(例)自分の知識、能力を困ってる人に活かしたい" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance11,id:"imp-11", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence11,id:"coin-11", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-11'>0</span></td>
 </tr>
 <tr>
-<td bgcolor="#99CC00">芸術</td>
-<td bgcolor="#FFFFFF">あさりのパスタ</td>
-<td bgcolor="#FFFFFF">6</td>
-<td bgcolor="#FFFFFF">5</td>
-<td bgcolor="#FFFFFF">1</td>
+<td bgcolor="#99CC00"><%= f.text_field :name12, placeholder: "(例)芸術" %></td>
+<td bgcolor="#FFFFFF"><%= f.text_field :text12,class: "value-text", placeholder: "(例)競い合うことでより良いものを作っていきたい" %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :importance12,id:"imp-12", class: "importance", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><%= f.number_field :coincidence12,id:"coin-12", class: "coincidence", min: 0, max: 10 %></td>
+<td bgcolor="#FFFFFF"><span id='diff-12'>0</span></td>
 </tr>
 </table>
+<div class= "date-input"><%= f.datetime_field :date%></div>
+<div class="value"><%= f.submit "create", class: "value-btn"%></div>
+<%end%>
 </div>
