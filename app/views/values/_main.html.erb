@@ -21,11 +21,10 @@
 </div>
 
 <div class="messages">
-<%if @values.present?%>
+
 <%= render "message"%>
-<%else%>
   <div class="create-value">
     <%= link_to "価値評定スケールの作成", new_situation_value_path(@situation.id) %>
   </div>
-<%end%>
+
 </div>
