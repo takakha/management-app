@@ -19,6 +19,11 @@ class ValuesController < ApplicationController
     end
   end
 
+  def edit
+    @situation = Situation.find(params[:situation_id])
+    
+  end
+
   private
 
   def value_params
