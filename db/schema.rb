@@ -67,30 +67,30 @@ ActiveRecord::Schema.define(version: 2020_09_19_130027) do
     t.text "text10"
     t.text "text11"
     t.text "text12"
-    t.integer "importance1"
-    t.integer "importance2"
-    t.integer "importance3"
-    t.integer "importance4"
-    t.integer "importance5"
-    t.integer "importance6"
-    t.integer "importance7"
-    t.integer "importance8"
-    t.integer "importance9"
-    t.integer "importance10"
-    t.integer "importance11"
-    t.integer "importance12"
-    t.integer "coincidence1"
-    t.integer "coincidence2"
-    t.integer "coincidence3"
-    t.integer "coincidence4"
-    t.integer "coincidence5"
-    t.integer "coincidence6"
-    t.integer "coincidence7"
-    t.integer "coincidence8"
-    t.integer "coincidence9"
-    t.integer "coincidence10"
-    t.integer "coincidence11"
-    t.integer "coincidence12"
+    t.integer "importance1", default: 0
+    t.integer "importance2", default: 0
+    t.integer "importance3", default: 0
+    t.integer "importance4", default: 0
+    t.integer "importance5", default: 0
+    t.integer "importance6", default: 0
+    t.integer "importance7", default: 0
+    t.integer "importance8", default: 0
+    t.integer "importance9", default: 0
+    t.integer "importance10", default: 0
+    t.integer "importance11", default: 0
+    t.integer "importance12", default: 0
+    t.integer "coincidence1", default: 0
+    t.integer "coincidence2", default: 0
+    t.integer "coincidence3", default: 0
+    t.integer "coincidence4", default: 0
+    t.integer "coincidence5", default: 0
+    t.integer "coincidence6", default: 0
+    t.integer "coincidence7", default: 0
+    t.integer "coincidence8", default: 0
+    t.integer "coincidence9", default: 0
+    t.integer "coincidence10", default: 0
+    t.integer "coincidence11", default: 0
+    t.integer "coincidence12", default: 0
     t.integer "difference1"
     t.integer "difference2"
     t.integer "difference3"
