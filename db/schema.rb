@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_19_130027) do
+ActiveRecord::Schema.define(version: 2020_09_24_051423) do
 
   create_table "purposes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
@@ -91,22 +91,21 @@ ActiveRecord::Schema.define(version: 2020_09_19_130027) do
     t.integer "coincidence10", default: 0
     t.integer "coincidence11", default: 0
     t.integer "coincidence12", default: 0
-    t.integer "difference1"
-    t.integer "difference2"
-    t.integer "difference3"
-    t.integer "difference4"
-    t.integer "difference5"
-    t.integer "difference6"
-    t.integer "difference7"
-    t.integer "difference8"
-    t.integer "difference9"
-    t.integer "difference10"
-    t.integer "difference11"
-    t.integer "difference12"
     t.bigint "situation_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["situation_id"], name: "index_values_on_situation_id"
+  end
+
+  create_table "visions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "later"
+    t.text "text"
+    t.text "title"
+    t.integer "achievement"
+    t.bigint "situation_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["situation_id"], name: "index_visions_on_situation_id"
   end
 
   add_foreign_key "situations", "users"

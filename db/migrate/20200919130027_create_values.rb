@@ -50,18 +50,6 @@ class CreateValues < ActiveRecord::Migration[6.0]
       t.integer :coincidence10, default: 0
       t.integer :coincidence11, default: 0
       t.integer :coincidence12, default: 0
-      t.integer :difference1
-      t.integer :difference2
-      t.integer :difference3
-      t.integer :difference4
-      t.integer :difference5
-      t.integer :difference6
-      t.integer :difference7
-      t.integer :difference8
-      t.integer :difference9
-      t.integer :difference10
-      t.integer :difference11
-      t.integer :difference12
       t.references :situation, forign_key: true
       t.timestamps
     end
