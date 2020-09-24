@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_19_130027) do
+ActiveRecord::Schema.define(version: 2020_09_24_051423) do
 
   create_table "purposes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
@@ -95,6 +95,17 @@ ActiveRecord::Schema.define(version: 2020_09_19_130027) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["situation_id"], name: "index_values_on_situation_id"
+  end
+
+  create_table "visions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "later"
+    t.text "text"
+    t.text "title"
+    t.integer "achievement"
+    t.bigint "situation_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["situation_id"], name: "index_visions_on_situation_id"
   end
 
   add_foreign_key "situations", "users"

@@ -21,5 +21,43 @@
 </div>
 
 <div class="messages">
-<h1>ここに構想をかく</h1>
+<%= form_with model: [@situation, @vision], html: {class: "form"}, local: true do |f| %>
+  <i>未来年表</i>
+  <div>
+  <%= f.datetime_field :later%>
+  </div>
+  <i>タイトル</i>
+  <div>
+  <%= f.text_field :title  %>
+  </div>
+  <i>ビジョン</i>
+  <div class="form-input">
+    <%= f.text_area :text, class: 'form-message', placeholder: 'type a vision' %>
+  </div>
+  <div>
+  <i>実現度</i>
+  </div>
+<%= f.number_field :achievement, min: 0, max: 100 %><i>%</i>
+<%= f.submit '送信', class: 'form-submit' %>
+<% end %>
+<hr>
+<ul class="flow">
+<% @visions.each do |f|%>
+<% if f.situation_id == @situation.id  %>
+    <li>
+        <span class="icon"><%=f.later %></span>
+        <dl>
+            <dt>
+            <%= f.title%>
+            (<%= f.achievement %>%)
+            </dt>
+            <dd>
+            <%= f.text %>
+            </dd>
+        </dl>
+    </li>
+    <%end%>
+<%end%>
+</ul>
+
 </div>
