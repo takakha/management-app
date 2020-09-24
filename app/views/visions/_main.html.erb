@@ -9,7 +9,7 @@
           <li><%= link_to '目的', situation_purposes_path(@situation.id), class: "purpose-list" %></li>
           <li><%= link_to '価値観', situation_values_path(@situation.id), class: "values-list" %></li>
           <li><%= link_to '構想', situation_visions_path(@situation.id), class: "vision-list" %></li>
-          <li><%= link_to '目標', "#", class: "goal-list" %></li>
+          <li><%= link_to '目標', situation_goals_path(@situation.id), class: "goal-list" %></li>
           
         </ul>
 </div>
@@ -35,7 +35,7 @@
     <%= f.text_area :text, class: 'form-message', placeholder: 'type a vision' %>
   </div>
   <div>
-  <i>実現度</i>
+  <i>実現可能性</i>
   </div>
 <%= f.number_field :achievement, min: 0, max: 100 %><i>%</i>
 <%= f.submit '送信', class: 'form-submit' %>

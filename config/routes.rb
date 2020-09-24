@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :purposes
     resources :values
     resources :visions
+    resources :goals
   end
 end
