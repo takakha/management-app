@@ -21,12 +21,5 @@
 </div>
 
 <div class="messages">
-<%= render  "message"%>
-<%= form_with model: [@situation, @purpose], html: {class: "form"}, local: true do |f| %>
-  <div class="form-input">
-    <%= f.text_field :text, class: 'form-message', placeholder: 'type a purpose' %>
-  </div>
-  <%= f.submit '送信', class: 'form-submit' %>
-<% end %>
-
+<h1>ここに構想をかく</h1>
 </div>
