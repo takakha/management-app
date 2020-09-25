@@ -20,6 +20,33 @@
   </div>
 </div>
 
-<div class="messages">
-<h1 class= "title">テスト</h1>
+<div class="goal-messages">
+<h1 class ="test">テスト</h1>
+<div class="progress-pie-chart" data-percent="43">
+
+  <div class="ppc-progress">
+    <div class="ppc-progress-fill"></div>
+  </div>
+  <div class="ppc-percents">
+    <div class="pcc-percents-wrapper">
+      <span>%</span>
+    </div>
+  </div>
+</div>
+</div>
+<hr>
+<div class ="form-goal">
+<%= form_with model: [@situation, @goal], html: {class: "form"}, local: true do |f| %>
+<i>目標を記入</i>
+  <div class="form-input">
+    <%= f.text_area :name, class: 'form-message', placeholder: 'type a goal' %>
+  </div>
+  <i>期日</i>
+   <div>
+  <%= f.datetime_field :deadline%>
+  </div>
+  <i>現在の進捗率</i>
+  <%= f.number_field :progress, min: 0, max: 100 %><span>%</span>
+  <%= f.submit '送信', class: 'form-submit' %>
+<%end%>
 </div>

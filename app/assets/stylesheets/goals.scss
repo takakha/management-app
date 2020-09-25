@@ -2,7 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.goal-messages{
+  display: flex;
+}
 
+.test{
+  padding: 60px;
+}
 
 @mixin circle($size) {
   content: "";
@@ -14,7 +20,7 @@
   height: $size;
 }
 
-$size: 200px;
+$size: 100px;
 .progress-pie-chart {
   width: $size;
   height: $size;
@@ -49,7 +55,7 @@ $size: 200px;
   display: table;
   span {
     display: block;
-    font-size: 2.6em;
+    font-size: 2.0em;
     font-weight: bold;
     color: #81CE97;
   }
@@ -60,11 +66,15 @@ $size: 200px;
 }
 
 
-
 body {
   font-family: Arial;
   background: #f7f7f7;
 }
+
 .progress-pie-chart {
   margin: 50px auto 0;
+}
+
+.form-goal{
+  display: flex;
 }
