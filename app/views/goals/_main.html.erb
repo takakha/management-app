@@ -19,22 +19,26 @@
     </div>
   </div>
 </div>
-
+<% @goals.each do |f|%>
+<% if f.situation_id == @situation.id  %>
 <div class="goal-messages">
-<h1 class ="test">テスト</h1>
-<div class="progress-pie-chart" data-percent="43">
-
+<h1 class ="goal-text"><%= f.name %></h1>
+<h2>期日<%= f.deadline%></h2>
+ <div class="progress-pie-chart" data-percent='21'>
+<%=f.progress %>
   <div class="ppc-progress">
     <div class="ppc-progress-fill"></div>
   </div>
-  <div class="ppc-percents">
+   <div class="ppc-percents">
     <div class="pcc-percents-wrapper">
       <span>%</span>
     </div>
-  </div>
-</div>
+   </div>
+ </div>
 </div>
 <hr>
+<%end%>
+<%end%>
 <div class ="form-goal">
 <%= form_with model: [@situation, @goal], html: {class: "form"}, local: true do |f| %>
 <i>目標を記入</i>

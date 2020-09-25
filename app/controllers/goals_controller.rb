@@ -3,6 +3,7 @@ class GoalsController < ApplicationController
   def index
     @situation = Situation.find(params[:situation_id])
     @goal = Goal.new
+    @goals = Goal.all
   end
 
   def create  
