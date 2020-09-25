@@ -3,4 +3,5 @@ class Situation < ApplicationRecord
   has_many :purposes
   has_many :values
   has_many :visions
+  has_many :goals
 end

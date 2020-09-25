@@ -19,45 +19,38 @@
     </div>
   </div>
 </div>
-
-<div class="messages">
-<%= form_with model: [@situation, @vision], html: {class: "form"}, local: true do |f| %>
-  <i>未来年表</i>
-  <div>
-  <%= f.datetime_field :later%>
-  </div>
-  <i>タイトル</i>
-  <div>
-  <%= f.text_field :title  %>
-  </div>
-  <i>ビジョン</i>
-  <div class="form-input">
-    <%= f.text_area :text, class: 'form-message', placeholder: 'type a vision' %>
-  </div>
-  <div>
-  <i>実現可能性</i>
-  </div>
-<%= f.number_field :achievement, min: 0, max: 100 %><i>%</i>
-<%= f.submit '送信', class: 'form-submit' %>
-<% end %>
-<hr>
-<ul class="flow">
-<% @visions.each do |f|%>
+<% @goals.each do |f|%>
 <% if f.situation_id == @situation.id  %>
-    <li>
-        <span class="icon"><%=f.later %></span>
-        <dl>
-            <dt>
-            <%= f.title%>
-            (<%= f.achievement %>%)
-            </dt>
-            <dd>
-            <%= f.text %>
-            </dd>
-        </dl>
-    </li>
-    <%end%>
+<div class="goal-messages">
+<h1 class ="goal-text"><%= f.name %></h1>
+<h2>期日<%= f.deadline%></h2>
+ <div class="progress-pie-chart" data-percent='21'>
+<%=f.progress %>
+  <div class="ppc-progress">
+    <div class="ppc-progress-fill"></div>
+  </div>
+   <div class="ppc-percents">
+    <div class="pcc-percents-wrapper">
+      <span>%</span>
+    </div>
+   </div>
+ </div>
+</div>
+<hr>
 <%end%>
-</ul>
-
+<%end%>
+<div class ="form-goal">
+<%= form_with model: [@situation, @goal], html: {class: "form"}, local: true do |f| %>
+<i>目標を記入</i>
+  <div class="form-input">
+    <%= f.text_area :name, class: 'form-message', placeholder: 'type a goal' %>
+  </div>
+  <i>期日</i>
+   <div>
+  <%= f.datetime_field :deadline%>
+  </div>
+  <i>現在の進捗率</i>
+  <%= f.number_field :progress, min: 0, max: 100 %><span>%</span>
+  <%= f.submit '送信', class: 'form-submit' %>
+<%end%>
 </div>
