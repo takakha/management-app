@@ -96,8 +96,7 @@
 </tr>
 </table>
 <div class = "value-btn">
-<%= link_to "edit",method: :get %>
-<%= link_to "delete", method: :delete  %>
+<%= link_to "削除","/situations/#{@situation.id}/values/#{f.id}", method: :delete  %>
 </div>
 <hr>
 <%end%>

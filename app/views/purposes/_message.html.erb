@@ -1,11 +1,10 @@
 <div class="message">
     <!-- 投稿したメッセージ内容を記述する -->
-<h1> tesuto </h1>
 <% @purposes.each do |f|%>
 <% if f.situation_id == @situation.id  %>
 <div class ="purpose-text">
 
- <%=link_to f.text,"/situations/#{@situation.id}/purposes/#{f.id}",method: :delete %>
+ <%=link_to f.text,"/situations/#{@situation.id}/purposes/#{f.id}",method: :delete  %>
 </div>
 <%end%>
 <%end%>

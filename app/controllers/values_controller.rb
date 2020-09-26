@@ -18,11 +18,15 @@ class ValuesController < ApplicationController
       render :new
     end
   end
-
-  def edit
-    @situation = Situation.find(params[:situation_id])
     
+  def destroy
+    @situation = Situation.find(params[:situation_id])
+    @value = Value.find(params[:id])
+    if @value.destroy
+      redirect_to situation_values_path(@situation.id)
+    end
   end
+
 
   private
 

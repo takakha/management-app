@@ -17,9 +17,13 @@
   background-color: #3babec;
   font-size: 20px;
   color: #FFF;
-  text-decoration: none;
   font-weight: bold;
   padding: 10px 24px;
   border-radius: 4px;
   border-bottom: 4px solid #0074d3;
 }
+
+.value-btn a{
+  text-decoration: none;
+  color: white;
+} 

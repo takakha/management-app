@@ -14,6 +14,14 @@ class VisionsController < ApplicationController
     end
   end
   
+  def destroy
+    @situation = Situation.find(params[:situation_id])
+    @vision = Vision.find(params[:id])
+    if @vision.destroy
+      redirect_to situation_visions_path(@situation.id)
+    end
+  end
+
   private
 
   def vision_params

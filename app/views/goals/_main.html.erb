@@ -23,9 +23,8 @@
 <% if f.situation_id == @situation.id  %>
 <div class="goal-messages">
 <h1 class ="goal-text"><%= f.name %></h1>
-<h2>期日<%= f.deadline%></h2>
- <div class="progress-pie-chart" data-percent='21'>
-<%=f.progress %>
+<h2 class="goal-date">期日<%= f.deadline%></h2>
+ <div class="progress-pie-chart" data-percent='35'>
   <div class="ppc-progress">
     <div class="ppc-progress-fill"></div>
   </div>
@@ -36,6 +35,7 @@
    </div>
  </div>
 </div>
+
 <hr>
 <%end%>
 <%end%>
@@ -49,8 +49,6 @@
    <div>
   <%= f.datetime_field :deadline%>
   </div>
-  <i>現在の進捗率</i>
-  <%= f.number_field :progress, min: 0, max: 100 %><span>%</span>
   <%= f.submit '送信', class: 'form-submit' %>
 <%end%>
 </div>

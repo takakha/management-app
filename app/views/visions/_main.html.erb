@@ -41,14 +41,15 @@
 <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
 <hr>
+<h3 class="vision-start">start</h3>
 <ul class="flow">
 <% @visions.each do |f|%>
 <% if f.situation_id == @situation.id  %>
     <li>
         <span class="icon"><%=f.later %></span>
         <dl>
-            <dt>
-            <%= f.title%>
+            <dt class="vision-title">
+            <%=link_to f.title,"/situations/#{@situation.id}/visions/#{f.id}",method: :delete %>
             (<%= f.achievement %>%)
             </dt>
             <dd>
