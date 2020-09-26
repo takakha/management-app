@@ -14,6 +14,14 @@ class GoalsController < ApplicationController
     end
   end
 
+  def destroy
+    @situation = Situation.find(params[:situation_id])
+    @goal = Goal.find(params[:id])
+    if @goal.destroy
+      redirect_to situation_goals_path(@situation.id)
+    end
+  end
+
   private
 
   def goal_params

@@ -22,6 +22,9 @@
 <% @goals.each do |f|%>
 <% if f.situation_id == @situation.id  %>
 <div class="goal-messages">
+<div href="#" class="btn-circle-border-double">
+<%= link_to "削除","/situations/#{@situation.id}/goals/#{f.id}", method: :delete  %>
+</div>
 <h1 class ="goal-text"><%= f.name %></h1>
 <h2 class="goal-date">期日<%= f.deadline%></h2>
  <div class="progress-pie-chart" data-percent='35'>
@@ -35,10 +38,10 @@
    </div>
  </div>
 </div>
-
+<%end%>
+<%end%>
 <hr>
-<%end%>
-<%end%>
+
 <div class ="form-goal">
 <%= form_with model: [@situation, @goal], html: {class: "form"}, local: true do |f| %>
 <i>目標を記入</i>
