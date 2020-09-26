@@ -5,7 +5,7 @@
 <% if f.situation_id == @situation.id  %>
 <div class ="purpose-text">
 
- <%= f.text%>
+ <%=link_to f.text,"/situations/#{@situation.id}/purposes/#{f.id}",method: :delete %>
 </div>
 <%end%>
 <%end%>
