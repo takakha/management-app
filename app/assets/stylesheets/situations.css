@@ -329,6 +329,11 @@ select {
   color: white;
 } 
 
+.form-message{
+  width: 480px;
+  height: 100px;
+  }
+
 * {
   box-sizing: border-box;
 }

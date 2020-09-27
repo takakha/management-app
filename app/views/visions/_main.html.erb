@@ -21,26 +21,6 @@
 </div>
 
 <div class="messages">
-<%= form_with model: [@situation, @vision], html: {class: "form"}, local: true do |f| %>
-  <i>未来年表</i>
-  <div>
-  <%= f.datetime_field :later%>
-  </div>
-  <i>タイトル</i>
-  <div>
-  <%= f.text_field :title  %>
-  </div>
-  <i>ビジョン</i>
-  <div class="form-input">
-    <%= f.text_area :text, class: 'form-message', placeholder: 'type a vision' %>
-  </div>
-  <div>
-  <i>実現可能性</i>
-  </div>
-<%= f.number_field :achievement, min: 0, max: 100 %><i>%</i>
-<%= f.submit '送信', class: 'form-submit' %>
-<% end %>
-<hr>
 <h3 class="vision-start">start</h3>
 <ul class="flow">
 <% @visions.each do |f|%>
@@ -60,5 +40,25 @@
     <%end%>
 <%end%>
 </ul>
+<hr>
+<%= form_with model: [@situation, @vision], html: {class: "form"}, local: true do |f| %>
+  <i>未来年表</i>
+  <div>
+  <%= f.datetime_field :later%>
+  </div>
+  <i>タイトル</i>
+  <div>
+  <%= f.text_field :title  %>
+  </div>
+  <i>ビジョン</i>
+  <div class="form-input">
+    <%= f.text_area :text, class: 'form-message-vision', placeholder: 'type a vision' %>
+  </div>
+  <div>
+  <i>実現可能性</i>
+  </div>
+<%= f.number_field :achievement, min: 0, max: 100 %><i>%</i>
+<%= f.submit '送信', class: 'form-submit' %>
+<% end %>
 
 </div>

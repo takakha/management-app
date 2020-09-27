@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+.form-message-vision{
+  width: 400px;
+  height: 200px;
+}
+
 ul {
   padding: 0;
 }
