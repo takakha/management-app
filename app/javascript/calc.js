@@ -109,4 +109,4 @@ const difference12 =  document.getElementById("diff-12")
     difference12.innerHTML = inputCoincidence12 - inputImportance12
    })
   }
-window.addEventListener('load', calc);
+  window.addEventListener('change', calc);
