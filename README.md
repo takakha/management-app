@@ -37,6 +37,8 @@ management_app
 
 ### url
 
+https://management-app-28212.herokuapp.com/
+
 
 ### テスト用アカウント
 
